@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Oo1-D8-RKd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Getter Done-->
+        <scene sceneID="kss-1H-eO1">
+            <objects>
+                <tableViewController id="6ib-zh-U7S" customClass="ShoppinglistTableViewController" customModule="AssesmentShoppinglist" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="msf-Ec-Ua8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listCell" id="dRc-lW-EXH" customClass="ShoppinglistTableViewCell" customModule="AssesmentShoppinglist" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dRc-lW-EXH" id="Fbv-6q-jV1">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CqL-Pa-iUp">
+                                            <rect key="frame" x="8" y="11" width="315.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5G-4j-ioa">
+                                            <rect key="frame" x="331.5" y="4" width="35.5" height="35.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="u5G-4j-ioa" secondAttribute="height" multiplier="1:1" id="Lbn-Lr-jxi"/>
+                                            </constraints>
+                                            <state key="normal" title="Button" image="Empty Star"/>
+                                            <connections>
+                                                <action selector="starButtonTapped:" destination="dRc-lW-EXH" eventType="touchUpInside" id="BOX-J9-5Iy"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="CqL-Pa-iUp" secondAttribute="bottom" constant="3" id="0pN-Gj-g1K"/>
+                                        <constraint firstItem="u5G-4j-ioa" firstAttribute="leading" secondItem="CqL-Pa-iUp" secondAttribute="trailing" constant="8" id="32G-Kk-tbl"/>
+                                        <constraint firstAttribute="bottom" secondItem="u5G-4j-ioa" secondAttribute="bottom" constant="4" id="RlV-s5-psf"/>
+                                        <constraint firstItem="CqL-Pa-iUp" firstAttribute="top" secondItem="Fbv-6q-jV1" secondAttribute="topMargin" constant="3" id="VPB-P3-Mm2"/>
+                                        <constraint firstItem="u5G-4j-ioa" firstAttribute="leading" secondItem="CqL-Pa-iUp" secondAttribute="trailing" constant="8" id="Y6R-Jy-CCu"/>
+                                        <constraint firstItem="CqL-Pa-iUp" firstAttribute="leading" secondItem="Fbv-6q-jV1" secondAttribute="leadingMargin" id="Yzy-KV-lpj"/>
+                                        <constraint firstAttribute="trailing" secondItem="u5G-4j-ioa" secondAttribute="trailing" constant="8" id="eLo-Mr-OFD"/>
+                                        <constraint firstItem="u5G-4j-ioa" firstAttribute="top" secondItem="Fbv-6q-jV1" secondAttribute="top" constant="4" id="xSZ-rW-o32"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="checkStarButton" destination="u5G-4j-ioa" id="56r-wV-JSl"/>
+                                    <outlet property="titleLabel" destination="CqL-Pa-iUp" id="6O8-Md-UNG"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6ib-zh-U7S" id="B8R-eZ-GrI"/>
+                            <outlet property="delegate" destination="6ib-zh-U7S" id="3Wb-KV-A6m"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Getter Done" prompt="America's Shopping List" id="jYQ-p4-OoM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Fi7-k2-zNi">
+                            <color key="tintColor" red="0.2499327958" green="1" blue="0.18532811909999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="addButtonTapped:" destination="6ib-zh-U7S" id="AVR-tx-q7b"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UFD-AI-9YR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1136.8" y="145.27736131934034"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="D6r-7q-VU1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Oo1-D8-RKd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a9z-MX-sIB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6ib-zh-U7S" kind="relationship" relationship="rootViewController" id="wiX-Zf-uTI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fz0-We-aB3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="308" y="145"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Empty Star" width="400" height="400"/>
+    </resources>
+</document>
